@@ -1,4 +1,4 @@
-# Airbnb Analysis
+# Supply Chain Optimization
 The main objective of the task is to minimize the overall cost while satisfying customer demand and adhering to operational constraints.
 
 ## Pre-Requisite
