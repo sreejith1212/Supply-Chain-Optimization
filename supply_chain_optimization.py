@@ -39,12 +39,12 @@ if __name__ == "__main__":
         
         st.header(':green[Supply Chain Optimization] :scroll:')
         st.write("")
-        col_home1, col_home2 = st.columns(2)
+        col_home1, col_home2 = st.columns([10,5])
         # col_home1.subheader(":orange[Application Properties :]")
-        for i in range(3):
+        for i in range(1):
             col_home1.subheader("")
         col_home1.subheader(":one: :grey[_The main objective of the task is to minimize the overall cost while satisfying customer demand and adhering to operational constraints._]")
-        for i in range(4):
+        for i in range(2):
             col_home1.subheader("")
         col_home1.subheader(":two: :grey[_Application Contains charts and graphs displaying key metrics such as total cost, capacity utilization, and optimal routing solutions._]")
 
