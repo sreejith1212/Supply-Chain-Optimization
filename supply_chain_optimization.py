@@ -7,12 +7,6 @@ import plotly.express as px
 
 if __name__ == "__main__":
 
-    # #Initializing the session state
-    # if 'airbnb_data' not in st.session_state:
-    #     st.session_state.airbnb_data = None
-    # if 'processed_airbnb_df' not in st.session_state:
-    #     st.session_state['processed_airbnb_df'] = None
-
     # set app page layout type
     st.set_page_config(layout="wide")
 
@@ -20,8 +14,8 @@ if __name__ == "__main__":
     with st.sidebar:        
         page = option_menu(
                             menu_title='Supply Chain',
-                            options=['Exploratory Data Analysis (EDA)', 'Advanced Analysis'],
-                            icons=['gear', 'bar-chart-line'],#, 'info-circle', 'map'],
+                            options=['Home', 'Exploratory Data Analysis (EDA)', 'Advanced Analysis'],
+                            icons=['gear', 'bar-chart-line', 'info-circle'],
                             menu_icon="pin-map-fill",
                             default_index=0 ,
                             styles={"container": {"padding": "5!important"},
@@ -40,6 +34,19 @@ if __name__ == "__main__":
     total_order_cost = pd.read_csv("total_order_cost.csv")
     order = pd.read_csv("supply_chain_cleaned_1.csv")
     order_new = pd.read_csv("supply_chain_cleaned_2.csv")
+
+    if page == "Home":
+        
+        st.header(':green[Supply Chain Optimization] :scroll:')
+        st.write("")
+        col_home1, col_home2 = st.columns(2)
+        # col_home1.subheader(":orange[Application Properties :]")
+        for i in range(3):
+            col_home1.subheader("")
+        col_home1.subheader(":one: :grey[_The main objective of the task is to minimize the overall cost while satisfying customer demand and adhering to operational constraints._]")
+        for i in range(4):
+            col_home1.subheader("")
+        col_home1.subheader(":two: :grey[_Application Contains charts and graphs displaying key metrics such as total cost, capacity utilization, and optimal routing solutions._]")
 
     if page == "Exploratory Data Analysis (EDA)":
 
